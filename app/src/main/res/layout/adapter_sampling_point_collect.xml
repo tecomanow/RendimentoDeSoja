@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginHorizontal="16dp"
+    android:background="@drawable/stroke_unselected">
+
+    <TextView
+        android:id="@+id/textViewSamplingPointNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ponto amostral - 1"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSamplingPointSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSamplingPointSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="2 metros"
+        app:layout_constraintStart_toEndOf="@id/textViewSamplingPointNumber"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewNumberPlants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Número de plantas"
+        app:layout_constraintEnd_toStartOf="@id/textViewNumberPlantsValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSamplingPointNumber"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewNumberPlantsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewNumberPlants"
+        app:layout_constraintTop_toTopOf="@id/textViewNumberPlants" />
+
+    <TextView
+        android:id="@+id/textViewNumberPods"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Número de vagens"
+        app:layout_constraintEnd_toStartOf="@id/textViewNumberPodsValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewNumberPlants"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewNumberPodsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewNumberPods"
+        app:layout_constraintTop_toTopOf="@id/textViewNumberPods" />
+
+    <TextView
+        android:id="@+id/textViewNumberBeans"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Número de sementes"
+        app:layout_constraintEnd_toStartOf="@id/textViewNumberBeansValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewNumberPods"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewNumberBeansValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewNumberBeans"
+        app:layout_constraintTop_toTopOf="@id/textViewNumberBeans" />
+
+    <Button
+        android:id="@+id/btnCollect"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Coletar dados"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewNumberBeansValue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

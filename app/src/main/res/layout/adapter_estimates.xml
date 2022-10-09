@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginHorizontal="8dp"
+    android:background="@drawable/stroke_unselected">
+
+    <TextView
+        android:id="@+id/textViewDateEstimate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="13/08/2022"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewEstimateCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Estimativa AN35"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDateEstimate"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/textViewEstimateProduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+        android:padding="8dp"
+        android:text="Produção estimada de 360,00kg/ha"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEstimateDescription"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewEstimateDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Faz. Santa Clara / Quadra 10C"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEstimateCode" />
+
+    <Button
+        android:id="@+id/btnRemoveEstimate"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEstimateProduction"
+        android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_right_24"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewEstimateCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateEstimate" />
+
+    <TextView
+        android:id="@+id/tvMeasurementSystemUsed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnRemoveEstimate"
+        android:text="Sistema imperial" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

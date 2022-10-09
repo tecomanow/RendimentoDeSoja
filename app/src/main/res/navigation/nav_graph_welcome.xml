@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_welcome"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="br.com.matreis.rendimentodesoja.ui.fragment.welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_measurementSystemFragment"
+            app:destination="@id/measurementSystemFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/measurementSystemFragment"
+        android:name="br.com.matreis.rendimentodesoja.ui.fragment.welcome.MeasurementSystemFragment"
+        android:label="fragment_measurement_system"
+        tools:layout="@layout/fragment_measurement_system" >
+        <action
+            android:id="@+id/action_measurementSystemFragment_to_aplicationFeaturesFragment"
+            app:destination="@id/aplicationFeaturesFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/aplicationFeaturesFragment"
+        android:name="br.com.matreis.rendimentodesoja.ui.fragment.welcome.AplicationFeaturesFragment"
+        android:label="fragment_aplication_features"
+        tools:layout="@layout/fragment_aplication_features" />
+</navigation>

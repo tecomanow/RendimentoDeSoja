@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.results.SoybeanYieldsResultsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/llResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/view_rounded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resultados"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewFarm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/farm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewFarmValue"
+                app:layout_constraintTop_toBottomOf="@id/llResults"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/textViewFarmValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text=".."
+                app:layout_constraintTop_toTopOf="@id/textViewFarm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textViewFarm"/>
+
+            <TextView
+                android:id="@+id/textViewBlock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/block"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewFarmValue"
+                app:layout_constraintTop_toBottomOf="@id/textViewFarm"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/textViewBlockValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=".."
+                app:layout_constraintTop_toTopOf="@id/textViewBlock"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textViewBlock"
+                android:gravity="end"/>
+
+            <TextView
+                android:id="@+id/textDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewDateValue"
+                app:layout_constraintTop_toBottomOf="@id/textViewBlock"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/textViewDateValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="13/08/2022"
+                app:layout_constraintTop_toTopOf="@id/textDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textDate"
+                android:gravity="end"/>
+
+            <TextView
+                android:id="@+id/textSampledPoints"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sampled_points"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewDateValue"
+                app:layout_constraintTop_toBottomOf="@id/textViewMeasurementSystem"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/textViewSimpledPointsValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3 pontos"
+                app:layout_constraintTop_toTopOf="@id/textSampledPoints"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textSampledPoints"
+                android:gravity="end"/>
+
+            <TextView
+                android:id="@+id/textSampledPointsSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tamanho dos pontos amostrados"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewSimpledPointsSizeValue"
+                app:layout_constraintTop_toBottomOf="@id/textSampledPoints"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/textViewSimpledPointsSizeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 metros"
+                app:layout_constraintTop_toTopOf="@id/textSampledPointsSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textSampledPointsSize"
+                android:gravity="end"/>
+
+            <TextView
+                android:id="@+id/textViewRowSpacing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row_spacing"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewRowSpacingValue"
+                app:layout_constraintTop_toBottomOf="@id/textSampledPointsSize"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/textViewRowSpacingValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0.5 metros"
+                app:layout_constraintTop_toTopOf="@id/textViewRowSpacing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textViewRowSpacing"
+                android:gravity="end"/>
+
+            <TextView
+                android:id="@+id/textViewWeigh1000Grains"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/weigh_1000_grains"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewWeigh1000GrainsValue"
+                app:layout_constraintTop_toBottomOf="@id/textViewRowSpacing"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/textViewWeigh1000GrainsValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1.5 kg"
+                app:layout_constraintTop_toTopOf="@id/textViewWeigh1000Grains"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textViewWeigh1000Grains"
+                android:gravity="end"/>
+
+            <TextView
+                android:id="@+id/textViewMeasurementSystem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sistema de medidas usado"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewtextViewMeasurementSystemValue"
+                app:layout_constraintTop_toBottomOf="@id/textDate"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/textViewtextViewMeasurementSystemValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Métrico"
+                app:layout_constraintTop_toTopOf="@id/textViewMeasurementSystem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textViewMeasurementSystem"
+                android:gravity="end"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clResults"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textViewWeigh1000Grains"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="8dp"
+                android:background="@drawable/bg_edittext">
+
+                <TextView
+                    android:id="@+id/textViewEstimateResult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Estimativa de produção"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textViewEstimateResultValue"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/textViewEstimateResultValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="390,00 kg/ha"
+                    app:layout_constraintTop_toTopOf="@id/textViewEstimateResult"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textViewEstimateResult"
+                    android:gravity="end"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/llSamplePoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/clResults"
+                android:layout_marginTop="16dp">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/view_rounded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pontos amostrados"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSamplingPointsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/llSamplePoints"
+                android:layout_marginTop="8dp"
+                tools:listitem="@layout/adapter_sampling_point_view"
+                tools:itemCount="3"
+                android:nestedScrollingEnabled="false"/>
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvSamplingPointsView"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnConvertMeasurementSystem"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_in_imperial_system"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvSamplingPointsView"
+                    android:textAllCaps="false" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <Button
+                android:id="@+id/btnBackToHome"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Voltar ao início"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toggleGroup"
+                android:textAllCaps="false"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

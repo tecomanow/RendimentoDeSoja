@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/MateusR/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/drawable-v24/bg_edittext.xml" value="0.242" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/drawable/ic_arrow_left_24.xml" value="0.253" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/drawable/ic_calculate_24.xml" value="0.248" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/drawable/image_bg_border.xml" value="0.2785" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/drawable/main_background.xml" value="0.2785" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/drawable/stroke_selected.xml" value="0.253" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/drawable/stroke_unselected.xml" value="0.253" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/drawable/view_rounded.xml" value="0.253" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_boas_vindas.xml" value="0.3484375" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_farms_blocks.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_new_block.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_new_farm.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_new_soybean_estimate.xml" value="0.3484375" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_settings.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_soybean_estimates.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_soybean_estimating.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_soybean_yields_results.xml" value="0.33" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_splash_screen.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/activity_welcome.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/adapter_block.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/adapter_block_filter.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/adapter_estimates.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/adapter_farm.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/adapter_farm_filter.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/adapter_sampling_point_collect.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/adapter_sampling_point_view.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/adapter_subitem_block.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/dialog_data_collect.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/dialog_edit_block.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/dialog_edit_farm.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/fragment_aplication_features.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/fragment_blocks.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/fragment_estimate_data_collect.xml" value="0.3484375" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/fragment_estimates.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/fragment_farms.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/fragment_farms_blocks.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/fragment_measurement_system.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/fragment_new_soybean_estimate.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/fragment_settings.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/fragment_welcome.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/layout/toolbar_divider.xml" value="0.4263206672845227" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2785" />
+        <entry key="..\:/Users/MateusR/Documents/Projetos Android/RendimentodeSoja/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2785" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

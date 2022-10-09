@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.estimate.EstimatesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Estimativas realizadas"
+                android:gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textColor="#1e1e1e"
+                android:padding="16dp"
+                android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/llEmptyFarm"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/rvBlocks"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/ic_undraw_empty"
+                    android:contentDescription="Você não realizou nenhuma estimativa"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhuma estimativa"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="16dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvFarmFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fazendas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                android:paddingHorizontal="8dp"
+                android:textSize="16sp"
+                tools:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFrams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFarmFilter"
+                tools:itemCount="2"
+                android:layout_marginTop="6dp"
+                tools:listitem="@layout/adapter_farm_filter"
+                tools:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvBlockFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quadras"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvFrams"
+                android:paddingHorizontal="8dp"
+                android:textSize="16sp"
+                android:layout_marginVertical="8dp"
+                android:visibility="gone"
+                tools:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBlocks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBlockFilter"
+                tools:itemCount="2"
+                android:layout_marginTop="8dp"
+                tools:listitem="@layout/adapter_block_filter"
+                tools:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEstimates"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvBlocks"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:listitem="@layout/adapter_estimates"
+                tools:itemCount="3"
+                android:clipToPadding="false"
+                android:paddingBottom="72dp"
+                android:nestedScrollingEnabled="false"
+                tools:visibility="gone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabNewEstimate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_add_24"
+            android:contentDescription="@string/realizar_estimativa" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
