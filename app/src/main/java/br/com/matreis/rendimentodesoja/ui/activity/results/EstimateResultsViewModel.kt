@@ -15,7 +15,7 @@ import java.util.*
 
 class EstimateResultsViewModel(private val repository: SoybeanCalculatorRepository) : ViewModel() {
 
-    private val _estimateWithSamplingPoint = MutableLiveData<EstimateWithSamplingPoint>()
+    val _estimateWithSamplingPoint = MutableLiveData<EstimateWithSamplingPoint>()
     val estimateWithSamplingPoint: LiveData<EstimateWithSamplingPoint>
         get() = _estimateWithSamplingPoint
 
@@ -28,7 +28,7 @@ class EstimateResultsViewModel(private val repository: SoybeanCalculatorReposito
 
     fun getEstimateResult(): Double {
 
-        val estimateWithSamplingPoint = estimateWithSamplingPoint.value!!
+        /*val estimateWithSamplingPoint = estimateWithSamplingPoint.value!!
 
         var rowSpacing = estimateWithSamplingPoint.estimate.rowSpacing
         var thousandWeight = estimateWithSamplingPoint.estimate.thousandGrainWeight
@@ -48,14 +48,9 @@ class EstimateResultsViewModel(private val repository: SoybeanCalculatorReposito
 
         averageNumberGrains = (numGrains / estimateWithSamplingPoint.samplingPoints.size).toDouble()
 
-        Log.i("MYTAG", "ESPAÇAMENTO $rowSpacing")
-        Log.i("MYTAG", "PESO 1.000G $thousandWeight")
-        Log.i("MYTAG", "TAMANHO AMOSTRAL $samplingPointSize")
-        Log.i("MYTAG", "NUM GRAOS $numGrains")
-        Log.i("MYTAG", "NUM MERDIO GRAOS $averageNumberGrains")
-        //Log.i("MYTAG", "RESULTADP $estimateResult")
+        return (averageNumberGrains * 10 * thousandWeight) / (samplingPointSize * rowSpacing)*/
 
-        return (averageNumberGrains * 10 * thousandWeight) / (samplingPointSize * rowSpacing)
+        return Calculations.getEstimateResult(estimateWithSamplingPoint.value!!)
     }
 
     fun getEstimateWithSamplingPoints(estimateId: Long){
@@ -64,6 +59,8 @@ class EstimateResultsViewModel(private val repository: SoybeanCalculatorReposito
             _estimateWithSamplingPoint.postValue(estimateWithSamplingPoint)
         }
     }
+
+
 
     class EstimateResultsViewModelFactory(private val repository: SoybeanCalculatorRepository) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {

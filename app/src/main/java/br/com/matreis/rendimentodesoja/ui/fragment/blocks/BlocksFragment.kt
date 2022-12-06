@@ -76,6 +76,11 @@ class BlocksFragment : Fragment() {
             editTextBlockName.setText(block.blockName)
             editTextBlockSize.setText(block.size.toString())
 
+            when(block.measurementSystem){
+                0 -> binding.textViewBlockSize.text = "Tamanho da quadra (ha)"
+                1 -> binding.textViewBlockSize.text = "Tamanho da quadra (acre)"
+            }
+
             btnClose.setOnClickListener {
                 dialog.dismiss()
             }

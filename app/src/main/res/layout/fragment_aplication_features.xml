@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragment.welcome.AplicationFeaturesFragment">
+    tools:context=".ui.fragment.welcome.ApplicationFeaturesFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -152,10 +152,10 @@
                 android:layout_marginTop="8dp"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnUnderstood"
+                android:id="@+id/btnContinue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/entendi"
+                android:text="@string/continuar"
                 android:textAllCaps="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -37,11 +37,13 @@ class MeasurementSystemFragment : Fragment() {
             0 -> {
                 binding.llImperialSystem.setBackgroundResource(R.drawable.stroke_unselected)
                 binding.llMetricSystem.setBackgroundResource(R.drawable.stroke_selected)
+                isEnableToContinue = true
             }
 
             1 -> {
                 binding.llImperialSystem.setBackgroundResource(R.drawable.stroke_selected)
                 binding.llMetricSystem.setBackgroundResource(R.drawable.stroke_unselected)
+                isEnableToContinue = true
             }
 
             else -> {

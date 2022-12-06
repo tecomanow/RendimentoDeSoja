@@ -13,10 +13,8 @@ interface EstimateDao {
     @Transaction
     suspend fun saveEstimate(estimateWithSamplingPoint: EstimateWithSamplingPoint) : Long {
         val id = insertEstimate(estimateWithSamplingPoint.estimate)
-        Log.i("MYTAG", "ESTIMATE ID: ${id}")
         estimateWithSamplingPoint.samplingPoints.forEach {
             it.idEstimate = id
-            Log.i("MYTAG", "SamplingPOint ID: ${it.idEstimate}")
             insertSamplingPoint(it)
         }
         return id

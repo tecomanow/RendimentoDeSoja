@@ -1,5 +1,6 @@
 package br.com.matreis.rendimentodesoja.ui.fragment.estimate
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -83,20 +84,34 @@ class EstimateDataCollectFragment : Fragment() {
                 dialog.dismiss()
             }
             btnConfirm.setOnClickListener {
-                val numberPlants = editTextNumberPlants.text.toString().toInt()
-                val numberPods = editTextNumberPods.text.toString().toInt()
-                val numberSeeds = editTextNumberSeeds.text.toString().toInt()
+                if(editTextNumberPlants.text.toString().isNotBlank()){
+                    if(editTextNumberPods.text.toString().isNotBlank()){
+                        if(editTextNumberSeeds.text.toString().isNotBlank()){
+                            val numberPlants = editTextNumberPlants.text.toString().toInt()
+                            val numberPods = editTextNumberPods.text.toString().toInt()
+                            val numberSeeds = editTextNumberSeeds.text.toString().toInt()
 
-                point.numberPlants = numberPlants
-                point.numberPods = numberPods
-                point.numberSeeds = numberSeeds
+                            point.numberPlants = numberPlants
+                            point.numberPods = numberPods
+                            point.numberSeeds = numberSeeds
 
-                estimateViewModel.updateSamplingPoint(point, pos)
-                samplingPointsAdapter.notifyItemChanged(pos)
-                dialog.dismiss()
+                            estimateViewModel.updateSamplingPoint(point, pos)
+                            samplingPointsAdapter.notifyItemChanged(pos)
+                            dialog.dismiss()
+                        }else{
+                            editTextNumberSeeds.error = "Insira o número de sementes"
+                        }
+                    }else{
+                        editTextNumberPods.error = "Insira o número de vagens"
+                    }
+                }else{
+                    editTextNumberPlants.error = "Insira o número de plantas"
+                }
             }
         }
+
     }
+
 
     private fun setUpObervers() {
         estimateViewModel.estimateWithSamplingPoint.observe(viewLifecycleOwner){
@@ -112,8 +127,19 @@ class EstimateDataCollectFragment : Fragment() {
 
     private fun setUpListener() {
         binding.btnGetEstimate.setOnClickListener {
+            createDialogSaveEstimate()
+        }
+    }
+
+    private fun createDialogSaveEstimate() {
+        val builder = MaterialAlertDialogBuilder(requireActivity())
+        builder.setTitle("Realizar estimativa")
+        builder.setMessage("Deseja finalizar a coleta de dados e realizar a estimativa?")
+        builder.setPositiveButton("Sim") { dialogInterface, i ->
             estimateViewModel.saveEstimate()
         }
+        builder.setNegativeButton("Não", null)
+        builder.show()
     }
 
 

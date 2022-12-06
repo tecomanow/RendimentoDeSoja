@@ -18,5 +18,6 @@ data class Block(
     val idBlock: Long,
     val idFarm: Long,
     var blockName: String,
-    var size: Double
+    var size: Double,
+    var measurementSystem: Int
 )

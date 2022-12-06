@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Rendimento de Soja</string>
+    <string name="app_name">Calculadora de Soja</string>
     <string name="main_hello">Olá,</string>
-    <string name="welcome_text">No Soybean Calculator você poderá realizar estimativas de rendimento de soja e obter um maior controle sobre seu campo.</string>
-    <string name="welcome_title">Bem vindo ao Soybean Calculator</string>
+    <string name="welcome_text">No Calculadora de Soja você poderá realizar estimativas de rendimento de soja e obter um maior controle sobre seu campo.</string>
+    <string name="welcome_title">Bem vindo ao Calculadora de Soja</string>
     <string name="continuar">Continuar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

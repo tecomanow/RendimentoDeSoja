@@ -33,7 +33,20 @@
     </fragment>
     <fragment
         android:id="@+id/aplicationFeaturesFragment"
-        android:name="br.com.matreis.rendimentodesoja.ui.fragment.welcome.AplicationFeaturesFragment"
+        android:name="br.com.matreis.rendimentodesoja.ui.fragment.welcome.ApplicationFeaturesFragment"
         android:label="fragment_aplication_features"
-        tools:layout="@layout/fragment_aplication_features" />
+        tools:layout="@layout/fragment_aplication_features" >
+        <action
+            android:id="@+id/action_aplicationFeaturesFragment_to_helpFragment"
+            app:destination="@id/helpFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="br.com.matreis.rendimentodesoja.ui.fragment.welcome.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
 </navigation>

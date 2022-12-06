@@ -12,8 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cvLogo"
             android:layout_width="0dp"
@@ -31,6 +29,7 @@
             android:visibility="visible">
 
             <br.com.matreis.rendimentodesoja.ui.components.BorderImageView
+                android:id="@+id/imgv_logo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintHeight_percent="0.35"

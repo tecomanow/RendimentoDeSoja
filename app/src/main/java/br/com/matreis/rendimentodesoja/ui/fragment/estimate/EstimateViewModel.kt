@@ -15,15 +15,13 @@ import kotlinx.coroutines.launch
 class EstimateViewModel(private val repository: SoybeanCalculatorRepository) : ViewModel() {
 
     private val _estimatesWithSamplings = MutableLiveData<List<EstimateWithSamplingPoint>>()
-    val estimatesWithsamplingPoints: LiveData<List<EstimateWithSamplingPoint>>
+    val estimatesWithSamplingPoints: LiveData<List<EstimateWithSamplingPoint>>
         get() = _estimatesWithSamplings
 
     //private var estimateWithSamplingPoint: EstimateWithSamplingPoint? = null
     private val estimateWithSamplingPointData = MutableLiveData<EstimateWithSamplingPoint>()
     private val _estimateId = MutableLiveData<Long>()
     private val _measurementSystem = MutableLiveData<Int>()
-
-
 
     val estimateWithSamplingPoint : LiveData<EstimateWithSamplingPoint>
         get() = estimateWithSamplingPointData

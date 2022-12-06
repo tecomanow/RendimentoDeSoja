@@ -57,7 +57,7 @@ class EstimatesFragment : Fragment() {
     }
 
     private fun setUpObservers() {
-        estimateViewModel.estimatesWithsamplingPoints.observe(viewLifecycleOwner) {
+        estimateViewModel.estimatesWithSamplingPoints.observe(viewLifecycleOwner) {
             if(it.isEmpty()){
                 setEmptyLayoutVisibility(true)
             }else{

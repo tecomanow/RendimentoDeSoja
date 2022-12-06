@@ -30,6 +30,11 @@ class BlocksAdapter: RecyclerView.Adapter<BlocksAdapter.MyBlocksViewHolder>() {
                 btnDelete.setOnClickListener {
                     listenDelete(block)
                 }
+
+                when(block.measurementSystem){
+                    0 -> binding.tvTitleBlockName.text = "Tamanho da quadra (ha)"
+                    1 -> binding.tvTitleBlockName.text = "Tamanho da quadra (acre)"
+                }
             }
         }
     }

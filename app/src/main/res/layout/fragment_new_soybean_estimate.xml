@@ -78,7 +78,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/llSpinnerBlock"
                     android:layout_marginTop="8dp"
-                    android:text="@string/not_choose_farm_or_block"/>
+                    android:text="@string/not_choose_farm_or_block"
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/textViewSamplingPoints"

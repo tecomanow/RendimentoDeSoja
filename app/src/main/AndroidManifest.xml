@@ -30,9 +30,6 @@
             android:name=".ui.activity.FarmsBlocksActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.SettingsActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.activity.results.SoybeanYieldsResultsActivity"
             android:exported="false" />
         <activity

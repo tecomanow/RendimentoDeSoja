@@ -24,8 +24,9 @@ class NewBlockActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
     private var idFarm = 0L
     private val farmsName = ArrayList<String>()
     private var farmsList : List<Farm>? = null
+    private var mSystem = -1
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+        override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityNewBlockBinding.inflate(layoutInflater)
         newBlockViewModel = ViewModelProvider(this, NewBlockViewModel.NewBlockViewModelFactory(
@@ -40,11 +41,21 @@ class NewBlockActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
 
         farmsName.add("Selecione uma fazenda")
 
+        getMeasurementSystem()
         setUpCustomToolbar()
         setUpListener()
         setUpObservers()
 
         setContentView(binding.root)
+    }
+
+    private fun getMeasurementSystem() {
+        mSystem = newBlockViewModel.getMeasurementSystem(this)
+        if(mSystem == 0){
+            binding.textViewBlockSize.text = "Tamanho da quadra (ha)"
+        }else if(mSystem == 1){
+            binding.textViewBlockSize.text = "Tamanho da quadra (acre)"
+        }
     }
 
     private fun setUpCustomToolbar() {
@@ -84,7 +95,8 @@ class NewBlockActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
                     idBlock = 0,
                     idFarm = idFarm,
                     binding.editTextBlockName.text.toString(),
-                    binding.editTextBlockSize.text.toString().toDouble()
+                    binding.editTextBlockSize.text.toString().toDouble(),
+                    mSystem
                 )
                 newBlockViewModel.insertBlock(block)
                 finish()

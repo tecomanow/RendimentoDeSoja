@@ -9,6 +9,14 @@
     android:background="@drawable/stroke_unselected">
 
     <TextView
+        android:id="@+id/tvTitleFarmName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Nome da quadra"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
         android:id="@+id/tvBlockName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -16,7 +24,16 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/tvTitleFarmName"/>
+
+    <TextView
+        android:id="@+id/tvTitleBlockName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Tamanho da quadra"
+        app:layout_constraintTop_toBottomOf="@id/tvBlockName"
+        android:layout_marginTop="8dp"/>
 
     <TextView
         android:id="@+id/tvFarmName"
@@ -37,7 +54,7 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFarmName"/>
+        app:layout_constraintTop_toBottomOf="@id/tvTitleBlockName"/>
 
     <Button
         android:id="@+id/btnEdit"
